@@ -5,18 +5,18 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav id="nav-bar">
+    <nav id="navbar">
       <header>Python Documentation</header>
       <ul>
         <li><a class="nav-link" href="#introduction">Introduction</a></li>
         <li><a class="nav-link" href="#requirements">Requirements</a></li>
-        <li><a class="nav-link" href="#hello-world">Hello World</a></li>
+        <li><a class="nav-link" href="#hello_world">Hello World</a></li>
         <li><a class="nav-link" href="#variables">Variables</a></li>
-        <li><a class="nav-link" href="#variable-scope">Variable Scope</a></li>
-        <li><a class="nav-link" href="#data-types">Data Types</a></li>
-        <li><a class="nav-link" href="#if-else">if..else.. Statement</a></li>
+        <li><a class="nav-link" href="#variable_scope">Variable Scope</a></li>
+        <li><a class="nav-link" href="#data_types">Data Types</a></li>
+        <li><a class="nav-link" href="#if_else">if..else.. Statement</a></li>
         <li><a class="nav-link" href="#while">While Statement</a></li>
-        <li><a class="nav-link" href="#function-declaration">Function Declaration</a></li>
+        <li><a class="nav-link" href="#function_declaration">Function Declaration</a></li>
         <li><a class="nav-link" href="#reference">Reference</a></li>
       </ul> 
     </nav>
@@ -45,7 +45,7 @@
             </article>
         </section>
 
-        <section class="main-section" id="hello-world">
+        <section class="main-section" id="hello_world">
             <header>Hello World</header>
             <article>
                 <p>To get started, open your IDE (Intergrated Development Environment). Our first code is the standard "Hello World" text.</p>
@@ -59,19 +59,39 @@
         <section class="main-section" id="variables">
             <header>Variables</header>
             <article>
-                <p>Variables are words that can be used to store data or values in programming languages.
+                <p>Variables are names given to certain locations in memory i.e. storing data/variables using names or labels.
                     Unlike other languages like Javascript, Python has no command for declaring varibales.
                 </p>
                 <code>
                     greeting = "Hello World!"
                     print(greeting)
                 </code>
+                <p>There are rules to follow when creating variables in Python.</p>
+                <ul>
+                    <li>A variable name can't start with a number.</li>
+                    <li>A variable name can only contain letters, numbers and underscores e.g. 
+                        <code>
+                            greet = "Hello"
+                            greet2 = "Hi"
+                            _greet = "¡Hola!"
+                        </code></li>
+                    <li>A variable name can't be a keyword.</li>
+                    <li>A variable name can't contain spaces e.g. <code>greet 2 = "Hi"</code> This variable name will result in an error.</li>
+                    <li>A variable name can not start with a number. </li>
+                </ul>
                 <p> Python also doesn't require declaring the data type of the value.</p>
                 <code>
                     a = "Hi!" # a is a string.
                     b = 43    # b is an integer.
                     c = 43.0  # c is a float
                 </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="variable_scope">
+            <header>Variable Scope</header>
+            <article>
+                <p></p>
             </article>
         </section>
 
