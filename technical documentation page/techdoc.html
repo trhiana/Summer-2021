@@ -16,7 +16,7 @@
         <li><a class="nav-link" href="#data_types">Data Types</a></li>
         <li><a class="nav-link" href="#if_else">if..else.. Statement</a></li>
         <li><a class="nav-link" href="#while">While Statement</a></li>
-        <li><a class="nav-link" href="#function_declaration">Function Declaration</a></li>
+        <li><a class="nav-link" href="#functions">Functions</a></li>
         <li><a class="nav-link" href="#reference">Reference</a></li>
       </ul> 
     </nav>
@@ -91,7 +91,19 @@
         <section class="main-section" id="variable_scope">
             <header>Variable Scope</header>
             <article>
-                <p></p>
+                <p>Scope is the part of the program where a variable can be accessed. Not all variables created can be accessed from anywhere 
+                    in a program. There are four major types of scope:
+                </p>
+                <ul>
+                    <li><strong>Local scope:</strong> When a variable is declared, it is accessible from then until the end of the program. It is available 
+                    for as long as the program is running. This is true especially when it is created in a function. It will be accessible only within the function.</li>
+                    <li><strong>Enclosing scope:</strong> This scope applies to nested functions. When a variable is declared in the first(outer) function, it can be 
+                    accessed by the second(inner) function but a variable declared in the second function can't be accessed by the first function.</li>
+                    <li><strong>Global scope:</strong> When a function is declared outside a function, it can be accessed by any function for instance if a variable is declared
+                    before the first nested function, it can be accessed by both the first and second function.</li>
+                    <li><strong>Built-in scope:</strong> This applies to reserved keywords. Keywords are words reserved by Python for specific purposes and can't be used for anything else.</li>
+                </ul>
+                <p>Functions are covered <a href="#functions">here</a>.</p>
             </article>
         </section>
 
