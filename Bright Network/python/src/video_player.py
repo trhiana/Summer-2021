@@ -20,15 +20,15 @@ class VideoPlayer:
         videos = self._video_library.get_all_videos()
         # print(videos)
         print("Here's a list of all available videos:")
-        for i in videos:
+        for vid in videos:
             tags = "[" 
-            for tag in i.tags:
+            for tag in vid.tags:
                 tags = tags + tag + " "
             tags+= "]"
             
             if tags != "[]":
                 tags = tags[0:len(tags) - 2] + "]"
-            print(" " + f"{i.title} ({i.video_id}) {tags}")
+            print(" " + f"{vid.title} ({vid.video_id}) {tags}")
 
 
     def play_video(self, video_id):
