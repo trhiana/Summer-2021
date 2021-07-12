@@ -14,8 +14,15 @@
         <li><a class="nav-link" href="#variables">Variables</a></li>
         <li><a class="nav-link" href="#variable_scope">Variable Scope</a></li>
         <li><a class="nav-link" href="#data_types">Data Types</a></li>
+        <li><a class="nav-link" href="#strings">Strings</a></li>
+        <li><a class="nav-link" href="#lists">Lists</a></li>
+        <li><a class="nav-link" href="#tuples">Tuples</a></li>
+        <li><a class="nav-link" href="#sets">Sets</a></li>
+        <li><a class="nav-link" href="#dictionaries">Dictionaries</a></li>
+        <li><a class="nav-link" href="#operators">Operators</a></li>
         <li><a class="nav-link" href="#if_else">if..else.. Statement</a></li>
-        <li><a class="nav-link" href="#while">While Statement</a></li>
+        <li><a class="nav-link" href="#for">for loops</a></li>
+        <li><a class="nav-link" href="#while">while loops</a></li>
         <li><a class="nav-link" href="#functions">Functions</a></li>
         <li><a class="nav-link" href="#reference">Reference</a></li>
       </ul> 
@@ -49,8 +56,8 @@
             <header>Hello World</header>
             <article>
                 <p>To get started, open your IDE (Intergrated Development Environment). Our first code is the standard "Hello World" text.</p>
-                <code>
-                    print("Hello World!")
+                <code> >>> print("Hello World!")
+                    Hello World!
                 </code>
                 <p>Run the code and see the output in your terminal.</p>
             </article>
@@ -62,29 +69,37 @@
                 <p>Variables are names given to certain locations in memory i.e. storing data/variables using names or labels.
                     Unlike other languages like Javascript, Python has no command for declaring varibales.
                 </p>
-                <code>
-                    greeting = "Hello World!"
-                    print(greeting)
+                <code> >>> greeting = "Hello World!"
+                    >>> print(greeting)
+                    Hello World!
                 </code>
                 <p>There are rules to follow when creating variables in Python.</p>
                 <ul>
                     <li>A variable name can't start with a number.</li>
                     <li>A variable name can only contain letters, numbers and underscores e.g. 
-                        <code>
-                            greet = "Hello"
-                            greet2 = "Hi"
-                            _greet = "¡Hola!"
+                        <code> >>> greet = "Hello"
+                            Hello
+                            >>> greet2 = "Hi"
+                            Hello
+                            >>> _greet = "¡Hola!"
+                            ¡Hola!
                         </code></li>
                     <li>A variable name can't be a keyword.</li>
-                    <li>A variable name can't contain spaces e.g. <code>greet 2 = "Hi"</code> This variable name will result in an error.</li>
+                    <li>A variable name can't contain spaces e.g. <code> >>> greet 2 = "Hi"
+                        File "<stdin>", line 1
+                            greet 2 = "Hi"
+                                  ^
+                        SyntaxError: invalid syntax
+                        
+                    </code> This variable name will result in an error.</li>
                     <li>A variable name can not start with a number. </li>
                 </ul>
                 <p> Python also doesn't require declaring the data type of the value.</p>
-                <code>
-                    a = "Hi!" # a is a string.
+                <code>a = "Hi!" # a is a string.
                     b = 43    # b is an integer.
                     c = 43.0  # c is a float
                 </code>
+                <p>Data types are covered <a href="#data_types">here</a>.</p>
             </article>
         </section>
 
@@ -92,8 +107,7 @@
             <header>Variable Scope</header>
             <article>
                 <p>Scope is the part of the program where a variable can be accessed. Not all variables created can be accessed from anywhere 
-                    in a program. There are four major types of scope:
-                </p>
+                    in a program. There are four major types of scope:</p>
                 <ul>
                     <li><strong>Local scope:</strong> When a variable is declared, it is accessible from then until the end of the program. It is available 
                     for as long as the program is running. This is true especially when it is created in a function. It will be accessible only within the function.</li>
@@ -107,8 +121,51 @@
             </article>
         </section>
 
-        <section class="main-section" id="variable_scope">
+        <section class="main-section" id="data_types">
             <header>Data Types</header>
+            <article>
+                <p>Every value in Python has a data type. The data type tells the interpretor how that data is to be used. Python has various data types and variables can store different data types.</p>
+                <p><strong><u>int</u></strong><br>
+                    Integers can be any length as long as the memory allows it. They are designated to the 'int' type.</p>
+                    <code> >>> print(806)
+                        806
+                        >>> print(75645238469308470572092734091034230472304027304)
+                        75645238469308470572092734091034230472304027304
+                    </code>
+                <p><strong><u>float</u></strong><br>
+                    Floating-point numbers are values specified by a decimal point. They are designated to the 'float' type. In Python, floats can be accurate by upto 15 decimal places.
+                    </p>
+                    <code> >>> print(8.06) 
+                        8.06
+                        >>> print(5423764971832481034.6834572903126341)
+                        5.423764971832481e+18
+                    </code>
+                <p><strong><u>complex</u></strong><br>
+                    Complex numbers are numbers in the form 'a+bj', where a is the real part, b is the imaginary part and j is the imaginery unit. These numbers are especually useful in electronics, optics and quantum theory.
+                    </p>
+                    <code> >>> print(23+56j)
+                        (23+56j)
+                    </code>
+                <p><strong><u>str</u></strong><br>
+                    Strings are a sequences of character data or Unicode characters. Strings are denoted with '' or "" and are designated to the 'str' type.</p>
+                    <code> >>> print("Strings look like this.") 
+                        Strings look like this.
+                    </code>
+                    <p>Like integers, strings can be as long as you want, only constrained by memory.</p>
+                <p><strong><u>Setting data types</u></strong><br>
+                    Data types can be set when declaring variables as seen below:</p>
+                    <code> >>> age = int(23)
+                        >>> w = str("The wrong way.")
+                    </code>
+                    <p>To find out the data type of a value, 'type()' is used.</p>
+                    <code> >>> type(w)
+                        <class 'int'>
+                    </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="strings">
+            <header>Strings</header>
             <article>
                 <p></p>
             </article>
@@ -119,6 +176,7 @@
             <article>
                 <ul>
                     <li>If you are a beginner, check out a guide <a href="https://wiki.python.org/moin/BeginnersGuide" target="_blank">here</a>.</li>
+                    <li>Read more about data types <a href="https://en.wikipedia.org/wiki/Data_type" target="_blank">here</a>.</li>
                 </ul>
             </article>
         </section>

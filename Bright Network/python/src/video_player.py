@@ -3,6 +3,7 @@
 from os import name
 from src import video
 from .video_library import VideoLibrary
+import random
 
 
 class VideoPlayer:
@@ -49,20 +50,21 @@ class VideoPlayer:
 
     def stop_video(self):
         """Stops the current video."""
-        video_id = self.play_video.get_video 
-        video = self._video_library.get_video(video_id) 
-        print(f"Stopping video: {video}")
 
 
     def play_random_video(self):
         """Plays a random video from the video library."""
-
-        print("play_random_video needs implementation")
+        videos = self._video_library.get_all_videos()
+        randomVid = random.sample(videos, len(videos))[0].video_id
+        return self.play_video(randomVid)
 
     def pause_video(self):
         """Pauses the current video."""
-
-        print("pause_video needs implementation")
+        if self.pause_video == False:
+            self.play_video = True
+            return "Pausing video: "
+        else:
+            self.stop_video() 
 
     def continue_video(self):
         """Resumes playing the current video."""
